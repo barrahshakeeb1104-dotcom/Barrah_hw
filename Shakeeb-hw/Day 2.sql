@@ -138,7 +138,7 @@ when total_score between 31 and 40 then '31-40'
 else '41-50'
 end as score_range,
 count (total_score) as count_of_range 
-from day_2_exam
+from day_1_exam
 group by 1
  
 Q19: For each result status, show count of students with scores greater than 30 and less than 40.
