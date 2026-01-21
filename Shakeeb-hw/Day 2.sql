@@ -130,7 +130,17 @@ select
  group by 1
 
 Q18: Group students by score ranges (0-20, 21-30, 31-40, 41-50) and show count for each range.
-
+select
+case
+when total_score between 0 and 20 then '0-20'
+when total_score between 21 and 30 then '21-30'
+when total_score between 31 and 40 then '31-40'
+else '41-50'
+end as score_range,
+count (total_score) as count_of_range 
+from day_2_exam
+group by 1
+ 
 Q19: For each result status, show count of students with scores greater than 30 and less than 40.
 select
 distinct result_status,
