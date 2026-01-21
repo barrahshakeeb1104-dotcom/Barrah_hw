@@ -150,3 +150,37 @@ where total_score>30 and total_score<40
 group by 1
 
 Q20: Group by first letter of student name and show count and average score for each letter.
+select
+case
+when student_name like 'A%' then 'A'
+when student_name like 'B%' then 'B'
+when student_name like 'C%' then 'C'
+when student_name like 'D%' then 'D'
+when student_name like 'E%' then 'E'
+when student_name like 'F%' then 'F'
+when student_name like 'G%' then 'G'
+when student_name like 'H%' then 'H'
+when student_name like 'I%' then 'I'
+when student_name like 'J%' then 'J'
+when student_name like 'K%' then 'K'
+when student_name like 'L%' then 'L'
+when student_name like 'M%' then 'M'
+when student_name like 'N%' then 'N'
+when student_name like 'O%' then 'O'
+when student_name like 'P%' then 'P'
+when student_name like 'Q%' then 'Q'
+when student_name like 'R%' then 'R'
+when student_name like 'S%' then 'S'
+when student_name like 'T%' then 'T'
+when student_name like 'U%' then 'U'
+when student_name like 'V%' then 'V'
+when student_name like 'W%' then 'W'
+when student_name like 'X%' then 'X'
+when student_name like 'Y%' then 'Y'
+else 'Z'
+end as first_letter,
+count(student_name),
+avg(total_score)
+from day_1_exam
+group by 1
+order by 1
